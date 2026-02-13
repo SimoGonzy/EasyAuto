@@ -1,0 +1,4 @@
+[13/02/2026 15:49:21] Avvio download file CSV...
+[13/02/2026 15:49:21] Download completato con successo!
+[13/02/2026 15:49:21] File salvato in: C:\Users\gonza\Documents\EasyAuto\EasyAuto\database\datasetCostiCarburante.csv
+[13/02/2026 15:49:21] --------------------------------------------------
