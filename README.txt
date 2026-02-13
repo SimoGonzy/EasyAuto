@@ -61,7 +61,7 @@ EasyAuto nasce per offrire uno strumento semplice e immediato che permetta di va
 
 ## Autore
 
-Sviluppato da **[tuo nome o username GitHub]**
+Sviluppato dal team EasyAuto
 
 ---
 
