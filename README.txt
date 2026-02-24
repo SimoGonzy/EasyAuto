@@ -67,4 +67,4 @@ Sviluppato dal team EasyAuto
 
 ## Licenza
 
-Questo progetto è distribuito sotto licenza MIT (o altra licenza a scelta).
+Questo progetto è distribuito sotto licenza MIT
