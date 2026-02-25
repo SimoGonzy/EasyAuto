@@ -1,0 +1,57 @@
+/* HOME CON SFONDO */
+.home-container {
+    position: relative;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.home-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("https://images.pexels.com/photos/3786092/pexels-photo-3786092.jpeg") center/cover no-repeat;
+    filter: blur(6px);
+    transform: scale(1.1);
+    z-index: -2;
+}
+
+.home-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.home-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+}
+
+.btn-start {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 18px 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-start:hover {
+    background-color: var(--primary);
+    transform: scale(1.05);
+}

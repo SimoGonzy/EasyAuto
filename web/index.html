@@ -1,77 +1,41 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Auto | Confronto 1vs1</title>
-    <link rel="stylesheet" href="stylecss/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Easy Auto | Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylecss/base.css">
+        <link rel="stylesheet" href="stylecss/home.css">
+    </head>
+    <body>
 
     <header class="main-header">
-    <div class="logo">
-        <img src="img/logo.png" alt="Logo EasyAuto">
-        <h1>Easy<span>Auto</span></h1>
-    </div>
-    
-    <nav class="nav-container">
-        <a href="login.html" class="btn-login">Accedi</a>
-    </nav>
-</header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo EasyAuto">
+            <h1>Easy<span>Auto</span></h1>
+        </div>
+        
+        <nav class="nav-container">
+            <a href="login.html" class="btn-login">Accedi</a>
+        </nav>
+    </header>
 
-    <main class="comparison-container">
-        <section class="selection-bar">
-            <div class="select-wrapper">
-                <label>Prima Auto</label>
-                <select id="car1-select" onchange="updateCar(1)">
-                    <option value="">Seleziona Modello</option>
-                    <option value="fiat500">Fiat 500 Hybrid</option>
-                    <option value="tesla3">Tesla Model 3</option>
-                </select>
-            </div>
+    <main class="home-container">
+        <div class="home-content">
+            <h2>Confronta le migliori auto in pochi secondi</h2>
+            <p>Scegli due modelli e scopri quale fa per te.</p>
 
-            <div class="vs-badge">VS</div>
-
-            <div class="select-wrapper">
-                <label>Seconda Auto</label>
-                <select id="car2-select" onchange="updateCar(2)">
-                    <option value="">Seleziona Modello</option>
-                    <option value="fiat500">Fiat 500 Hybrid</option>
-                    <option value="tesla3">Tesla Model 3</option>
-                </select>
-            </div>
-        </section>
-
-        <div class="comparison-grid">
-            <div class="car-column">
-                <div class="car-card">
-                    <img id="car1-img" src="https://via.placeholder.com/400x250?text=Auto+1" alt="Auto 1">
-                    <h2 id="car1-name">Seleziona Auto A</h2>
-                </div>
-                <div class="data-value" id="car1-price">-</div>
-                <div class="data-value" id="car1-fuel">-</div>
-                <div class="data-value" id="car1-maint">-</div>
-            </div>
-
-            <div class="labels-column">
-                <div class="spacer-img"></div>
-                <div class="label">Prezzo Listino</div>
-                <div class="label">Consumo</div>
-                <div class="label">Manutenzione</div>
-            </div>
-
-            <div class="car-column">
-                <div class="car-card">
-                    <img id="car2-img" src="https://via.placeholder.com/400x250?text=Auto+2" alt="Auto 2">
-                    <h2 id="car2-name">Seleziona Auto B</h2>
-                </div>
-                <div class="data-value" id="car2-price">-</div>
-                <div class="data-value" id="car2-fuel">-</div>
-                <div class="data-value" id="car2-maint">-</div>
-            </div>
+            <a href="confronto.html" class="btn-start">
+                Inizia il Confronto
+            </a>
         </div>
     </main>
 
-    <script src="javascript/script.js"></script>
-</body>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>© 2026 Easy<span>Auto</span> - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    </body>
 </html>
