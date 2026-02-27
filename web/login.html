@@ -3,20 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | EasyAuto</title>
-    <link rel="stylesheet" href="/stylecss/style.css">
+    <title>Login | CarCompare</title>
+    <link rel="stylesheet" href="stylecss/base.css">
+    <link rel="stylesheet" href="stylecss/login.css">
 </head>
-<body style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<body class="login-page">
 
-    <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 350px; text-align: center;">
-        <h2 style="color: var(--primary);">Accedi a <span>EasyAuto</span></h2>
-        <form style="margin-top: 20px;">
-            <input type="email" placeholder="Email" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px;">
-            <input type="password" placeholder="Password" style="width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
-            <button type="submit" class="btn-login" style="width: 100%; cursor: pointer;">Entra</button>
-        </form>
-        <p style="margin-top: 20px;"><a href="index.html" style="color: #888; text-decoration: none; font-size: 0.8rem;">← Torna al confronto</a></p>
+    <header class="main-header">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+            <h1>Car<span>Compare</span></h1>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <main class="login-card">
+            <h2>Accedi al portale</h2>
+            <form id="auth-form">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="nome@esempio.it" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="********" required>
+                </div>
+                <button type="submit" class="btn-login">Entra</button>
+            </form>
+            <div class="login-footer-links">
+                <p>Non hai un account? <a href="#">Registrati ora</a></p>
+                <a href="confronto.html" class="back-link">← Torna al confronto</a>
+            </div>
+        </main>
     </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>© 2026 <span>EasyAuto</span> - Tutti i diritti riservati</p>
+        </div>
+    </footer>
 
 </body>
 </html>

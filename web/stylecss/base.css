@@ -7,7 +7,7 @@
 
 :root {
     --primary: #1a2a3a;
-    --accent: #3498db;
+    --accent: #3498db!important;
     --bg: #f4f7f6;
     --white: #ffffff;
 }
@@ -83,12 +83,12 @@ body {
 }
 
 .footer-content p {
-    color: var(--primary);
-    font-weight: 500;
+    color: var(--primary)!important;
+    font-weight: 500!important;
 }
 
 .footer-content span {
-    color: var(--accent);
+    color: var(--accent) !important;
 }
 
 /* RESPONSIVE */
