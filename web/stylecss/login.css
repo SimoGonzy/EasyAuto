@@ -76,3 +76,25 @@ html, body {
     color: #999;
     text-decoration: none;
 }
+.alert-error {
+    background-color: #fdecea; /* Rosso molto chiaro */
+    color: #d32f2f;            /* Rosso scuro per il testo */
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #f5c2c7;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: fadeIn 0.3s ease-in; /* Effetto comparsa fluida */
+}
+
+.alert-error .icon {
+    font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

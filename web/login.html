@@ -19,14 +19,21 @@
     <div class="login-container">
         <main class="login-card">
             <h2>Accedi al portale</h2>
-            <form id="auth-form">
+            <div id="error-box" class="alert-error" style="display: none;">
+    <span class="icon">⚠️</span>
+    <span id="error-message">Email o password non corretti.</span>
+</div>
+
+
+    </form>
+            <form id="loginForm">
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" placeholder="nome@esempio.it" required>
+                    <input type="email" id="emailInput" placeholder="nome@esempio.it" required>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" placeholder="********" required>
+                    <input type="password" id="passwordInput" placeholder="********" required>
                 </div>
                 <button type="submit" class="btn-login">Entra</button>
             </form>
@@ -43,5 +50,6 @@
         </div>
     </footer>
 
+    <script src="javascript/script.js"></script>
 </body>
 </html>
