@@ -1,6 +1,14 @@
-const Database = require('better-sqlite3');
-const db = new Database('/database/dbautoprova.db');
+fetch("php/getAuto.php")
+.then(response => response.json())
+.then(data => {
 
-const auto = db.prepare('SELECT * FROM Auto');
-console.log(auto);
+    console.log("Auto nel database:");
 
+    for(let i = 0; i < data.length; i++){
+        console.log(data[i]);
+    }
+
+})
+.catch(error => {
+    console.error("Errore:", error);
+});
