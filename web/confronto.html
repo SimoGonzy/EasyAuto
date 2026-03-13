@@ -9,6 +9,17 @@
         <link rel="icon" type="image/png" href="img/logo.png">
     </head>
     <body>
+        <style>
+            .search-container { position: relative; width: 300px; }
+            #searchBar1 { width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; }
+            #searchBar2 { width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; }
+            .results-box { 
+                position: absolute; width: 100%; background: white; 
+                border: 1px solid #ddd; display: none; z-index: 100;
+            }
+            .result-item { padding: 10px; cursor: pointer; }
+            .result-item:hover { background-color: #f0f0f0; }
+        </style>
         <header class="main-header">
             <div class="logo">
                 <img src="img/logo.png" alt="Logo EasyAuto">
@@ -25,22 +36,20 @@
             <section class="selection-bar">
                 <div class="select-wrapper">
                     <label>Prima Auto</label>
-                    <select id="car1-select" onchange="updateCar(1)">
-                        <option value="">Seleziona Modello</option>
-                        <option value="fiat500">Fiat 500 Hybrid</option>
-                        <option value="tesla3">Tesla Model 3</option>
-                    </select>
+                    <div class="search-container">
+                        <input type="text" id="searchBar1" placeholder="Cerca prima auto..." autocomplete="off">
+                        <div id="results1" class="results-box"></div>
+                    </div>
                 </div>
 
                 <div class="vs-badge">VS</div>
 
                 <div class="select-wrapper">
                     <label>Seconda Auto</label>
-                    <select id="car2-select" onchange="updateCar(2)">
-                        <option value="">Seleziona Modello</option>
-                        <option value="fiat500">Fiat 500 Hybrid</option>
-                        <option value="tesla3">Tesla Model 3</option>
-                    </select>
+                    <div class="search-container">
+                        <input type="text" id="searchBar2" placeholder="Cerca seconda auto..." autocomplete="off">
+                        <div id="results2" class="results-box"></div>
+                    </div>
                 </div>
             </section>
 
