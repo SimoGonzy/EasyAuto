@@ -1,5 +1,9 @@
 // Dati estratti direttamente dal tuo CSV
 let rawData = [];
+const date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
 
 fetch("../database/datasetCostiCarburante.csv")
   .then((response) => response.text())
@@ -76,6 +80,20 @@ function updateTable(regione) {
     html += `</tbody></table>`;
     content.innerHTML = html;
   } else {
-    content.innerHTML = `<div class="empty-state">Nessun dato trovato per questa regione nel dataset del 27-02-2026.</div>`;
+    content.innerHTML = `<div class="empty-state">Nessun dato trovato per questa regione nel dataset del  ${day}-${month}-${year}.</div>`;
   }
 }
+
+function data(title) {
+  const div = document.getElementById(title);
+  if (!div) return; // Controllo di sicurezza nel caso l'id non esista
+  
+  if (title == "data-label") {
+    div.innerText = `Aggiornamento: ${day}-${month}-${year}`;
+  } else if (title == "empty-state") {
+    div.innerText = `Clicca su una regione per visualizzare i prezzi medi estrapolati dal dataset del ${day}-${month}-${year}.`;
+  }
+}
+
+data("data-label");
+data("empty-state");
