@@ -10,8 +10,8 @@ try {
     $auto = array();
 
     if ($searchTerm !== '') {
-        // Selezioniamo solo la colonna modello
-        $stmt = $db->prepare("SELECT modello FROM auto WHERE modello LIKE :t LIMIT 10");
+        // Selezioniamo tutte le colonne necessarie
+        $stmt = $db->prepare("SELECT * FROM auto WHERE modello LIKE :t LIMIT 10");
         
         if (!$stmt) {
             throw new Exception("Errore query: " . $db->lastErrorMsg());
