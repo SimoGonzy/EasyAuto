@@ -9,6 +9,17 @@
         <link rel="icon" type="image/png" href="img/logo.png">
     </head>
     <body>
+        <style>
+            .search-container { position: relative; width: 300px; }
+            #searchBar1 { width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; }
+            #searchBar2 { width: 100%; padding: 10px; border-radius: 20px; border: 1px solid #ccc; }
+            .results-box { 
+                position: absolute; width: 100%; background: white; 
+                border: 1px solid #ddd; display: none; z-index: 100;
+            }
+            .result-item { padding: 10px; cursor: pointer; }
+            .result-item:hover { background-color: #f0f0f0; }
+        </style>
         <header class="main-header">
             <div class="logo">
                 <img src="img/logo.png" alt="Logo EasyAuto">
@@ -27,6 +38,8 @@
                     <label>Prima Auto</label>
                     <select id="car1-select" onchange="updateCar(1)">
                         <option value="">Seleziona Modello</option>
+                        <option value="fiat500">Fiat 500 Hybrid</option>
+                        <option value="tesla3">Tesla Model 3</option>
                     </select>
                 </div>
 
@@ -36,6 +49,8 @@
                     <label>Seconda Auto</label>
                     <select id="car2-select" onchange="updateCar(2)">
                         <option value="">Seleziona Modello</option>
+                        <option value="fiat500">Fiat 500 Hybrid</option>
+                        <option value="tesla3">Tesla Model 3</option>
                     </select>
                 </div>
             </section>
@@ -43,7 +58,7 @@
             <div class="comparison-grid">
                 <div class="car-column">
                     <div class="car-card">
-                        <img id="car1-img" src="https://via.placeholder.com/400x250?text=Auto+1" alt="Auto 1">
+                        <img id="car1-img" src="" alt="Auto 1">
                         <h2 id="car1-name">Seleziona Auto A</h2>
                     </div>
                     <div class="data-value" id="car1-price">-</div>
@@ -60,7 +75,7 @@
 
                 <div class="car-column">
                     <div class="car-card">
-                        <img id="car2-img" src="https://via.placeholder.com/400x250?text=Auto+2" alt="Auto 2">
+                        <img id="car2-img" src="" alt="Auto 2">
                         <h2 id="car2-name">Seleziona Auto B</h2>
                     </div>
                     <div class="data-value" id="car2-price">-</div>
@@ -70,6 +85,6 @@
             </div>
         </main>
 
-        <script src="javascript/script.js"></script>
+        <script src="javascript/database.js"></script>
     </body>
 </html>
