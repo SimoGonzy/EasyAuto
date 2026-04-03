@@ -1,0 +1,402 @@
+[
+    {
+        "id": "11",
+        "name": "Audi A3 1.5 TFSI - benzina",
+        "brand": "Audi",
+        "model": "Audi A3 1.5 TFSI",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/audi_a3.jpg"
+    },
+    {
+        "id": "12",
+        "name": "Audi A3 2.0 TDI - diesel",
+        "brand": "Audi",
+        "model": "Audi A3 2.0 TDI",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/audi_a3.jpg"
+    },
+    {
+        "id": "30",
+        "name": "Audi A3 30 TDI - diesel",
+        "brand": "Audi",
+        "model": "Audi A3 30 TDI",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/audi_a3.jpg"
+    },
+    {
+        "id": "29",
+        "name": "Audi S3 - benzina",
+        "brand": "Audi",
+        "model": "Audi S3",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/audi_s3.png"
+    },
+    {
+        "id": "7",
+        "name": "BMW 318i - benzina",
+        "brand": "BMW",
+        "model": "BMW 318i",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "6 l/100km (misto)",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/bmw_318i.avif"
+    },
+    {
+        "id": "25",
+        "name": "BMW 320d - diesel",
+        "brand": "BMW",
+        "model": "BMW 320d",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/bmw_318i.avif"
+    },
+    {
+        "id": "8",
+        "name": "BMW 330i - benzina",
+        "brand": "BMW",
+        "model": "BMW 330i",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "7 l/100km (misto)",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/bmw_330i.png"
+    },
+    {
+        "id": "26",
+        "name": "BMW M340i - benzina",
+        "brand": "BMW",
+        "model": "BMW M340i",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/bmw_330i.png"
+    },
+    {
+        "id": "4",
+        "name": "Fiat 500 1.2 - benzina",
+        "brand": "Fiat",
+        "model": "Fiat 500 1.2",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "6 l/100km (misto)",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/fiat_panda.jpeg"
+    },
+    {
+        "id": "3",
+        "name": "Fiat 500 Hybrid - benzina",
+        "brand": "Fiat",
+        "model": "Fiat 500 Hybrid",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "5 l/100km (misto)",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/fiat_panda.jpeg"
+    },
+    {
+        "id": "22",
+        "name": "Fiat 500 Sport - benzina",
+        "brand": "Fiat",
+        "model": "Fiat 500 Sport",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/fiat_panda.jpeg"
+    },
+    {
+        "id": "1",
+        "name": "Fiat Panda 1.0 Hybrid - benzina",
+        "brand": "Fiat",
+        "model": "Panda 1.0 Hybrid",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "5 l/100km (misto)",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/fiat_panda.jpeg"
+    },
+    {
+        "id": "2",
+        "name": "Fiat Panda 1.2 - benzina",
+        "brand": "Fiat",
+        "model": "Panda 1.2",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "5 l/100km (misto)",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/fiat_panda.jpeg"
+    },
+    {
+        "id": "21",
+        "name": "Fiat Panda Cross - benzina",
+        "brand": "Fiat",
+        "model": "Panda Cross",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/fiat_panda_cross.png"
+    },
+    {
+        "id": "15",
+        "name": "Ford Focus 1.0 EcoBoost - benzina",
+        "brand": "Ford",
+        "model": "Ford Focus 1.0 EcoBoost",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/ford_focus.jpg"
+    },
+    {
+        "id": "16",
+        "name": "Ford Focus 2.0 Diesel - diesel",
+        "brand": "Ford",
+        "model": "Ford Focus 2.0 Diesel",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/ford_focus.jpg"
+    },
+    {
+        "id": "33",
+        "name": "Ford Focus ST - benzina",
+        "brand": "Ford",
+        "model": "Ford Focus ST",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/ford_focus.jpg"
+    },
+    {
+        "id": "34",
+        "name": "Ford Focus Wagon - diesel",
+        "brand": "Ford",
+        "model": "Ford Focus Wagon",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/ford_focus.jpg"
+    },
+    {
+        "id": "39",
+        "name": "Hyundai i30 - benzina",
+        "brand": "Hyundai",
+        "model": "Hyundai i30",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/hyundai_i30.png"
+    },
+    {
+        "id": "40",
+        "name": "Hyundai i30 N - benzina",
+        "brand": "Hyundai",
+        "model": "Hyundai i30 N",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/hyundai_i30.png"
+    },
+    {
+        "id": "9",
+        "name": "Mercedes A180 - benzina",
+        "brand": "Mercedes",
+        "model": "Mercedes A180",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "6 l/100km (misto)",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/mercedes_a.png"
+    },
+    {
+        "id": "10",
+        "name": "Mercedes A200 - benzina",
+        "brand": "Mercedes",
+        "model": "Mercedes A200",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "6 l/100km (misto)",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/mercedes_a.png"
+    },
+    {
+        "id": "27",
+        "name": "Mercedes A220 - benzina",
+        "brand": "Mercedes",
+        "model": "Mercedes A220",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/mercedes_a.png"
+    },
+    {
+        "id": "28",
+        "name": "Mercedes A250 - benzina",
+        "brand": "Mercedes",
+        "model": "Mercedes A250",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/mercedes_a.png"
+    },
+    {
+        "id": "17",
+        "name": "Peugeot 308 1.2 - benzina",
+        "brand": "Peugeot",
+        "model": "Peugeot 308 1.2",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/peugeout_308.jpg"
+    },
+    {
+        "id": "18",
+        "name": "Peugeot 308 1.6 Diesel - diesel",
+        "brand": "Peugeot",
+        "model": "Peugeot 308 1.6 Diesel",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/peugeout_308.jpg"
+    },
+    {
+        "id": "35",
+        "name": "Peugeot 308 GT - benzina",
+        "brand": "Peugeot",
+        "model": "Peugeot 308 GT",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/peugeout_308_gt.jpg"
+    },
+    {
+        "id": "36",
+        "name": "Peugeot 308 Hybrid - ibrido",
+        "brand": "Peugeot",
+        "model": "Peugeot 308 Hybrid",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/peugeout_308.jpg"
+    },
+    {
+        "id": "19",
+        "name": "Renault Clio 1.0 - benzina",
+        "brand": "Renault",
+        "model": "Renault Clio 1.0",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/renault_clio.png"
+    },
+    {
+        "id": "20",
+        "name": "Renault Clio 1.3 TCe - benzina",
+        "brand": "Renault",
+        "model": "Renault Clio 1.3 TCe",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/renault_clio.png"
+    },
+    {
+        "id": "38",
+        "name": "Renault Clio Diesel - diesel",
+        "brand": "Renault",
+        "model": "Renault Clio Diesel",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/renault_clio.png"
+    },
+    {
+        "id": "37",
+        "name": "Renault Clio RS Line - benzina",
+        "brand": "Renault",
+        "model": "Renault Clio RS Line",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/reunault_clio_rsline.jpg"
+    },
+    {
+        "id": "14",
+        "name": "Toyota Corolla 1.8 - benzina",
+        "brand": "Toyota",
+        "model": "Toyota Corolla 1.8",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/toyota_corolla.png"
+    },
+    {
+        "id": "31",
+        "name": "Toyota Corolla 2.0 Hybrid - ibrido",
+        "brand": "Toyota",
+        "model": "Toyota Corolla 2.0 Hybrid",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/toyota_corolla.png"
+    },
+    {
+        "id": "13",
+        "name": "Toyota Corolla Hybrid - ibrido",
+        "brand": "Toyota",
+        "model": "Toyota Corolla Hybrid",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/toyota_corolla.png"
+    },
+    {
+        "id": "32",
+        "name": "Toyota Corolla Touring - ibrido",
+        "brand": "Toyota",
+        "model": "Toyota Corolla Touring",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/toyota_corolla.png"
+    },
+    {
+        "id": "5",
+        "name": "Volkswagen VW Golf 1.0 TSI - benzina",
+        "brand": "Volkswagen",
+        "model": "VW Golf 1.0 TSI",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "5 l/100km (misto)",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/vw_golf.png"
+    },
+    {
+        "id": "24",
+        "name": "Volkswagen VW Golf 1.5 TSI - benzina",
+        "brand": "Volkswagen",
+        "model": "VW Golf 1.5 TSI",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/vw_golf.png"
+    },
+    {
+        "id": "6",
+        "name": "Volkswagen VW Golf 2.0 TDI - diesel",
+        "brand": "Volkswagen",
+        "model": "VW Golf 2.0 TDI",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "4 l/100km (misto)",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/vw_golf.png"
+    },
+    {
+        "id": "23",
+        "name": "Volkswagen VW Golf GTI - benzina",
+        "brand": "Volkswagen",
+        "model": "VW Golf GTI",
+        "price": "Dato non disponibile",
+        "fuel_consumption": "Dato non disponibile",
+        "maintenance": "Dato non disponibile",
+        "image": "img/cars/volkswagen_golf_gti.png"
+    }
+]
