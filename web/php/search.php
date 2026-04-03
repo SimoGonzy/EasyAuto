@@ -9,20 +9,18 @@ try {
     $searchTerm = isset($_GET['q']) ? $_GET['q'] : '';
     $auto = array();
 
-    if ($searchTerm !== '') {
-        // Selezioniamo tutte le colonne necessarie
-        $stmt = $db->prepare("SELECT * FROM auto WHERE modello LIKE :t LIMIT 10");
-        
-        if (!$stmt) {
-            throw new Exception("Errore query: " . $db->lastErrorMsg());
-        }
+    // Selezioniamo tutte le colonne necessarie
+    $stmt = $db->prepare("SELECT * FROM auto WHERE modello LIKE :t LIMIT 10");
+    
+    if (!$stmt) {
+        throw new Exception("Errore query: " . $db->lastErrorMsg());
+    }
 
-        $stmt->bindValue(':t', '%' . $searchTerm . '%', SQLITE3_TEXT);
-        $result = $stmt->execute();
+    $stmt->bindValue(':t', '%' . $searchTerm . '%', SQLITE3_TEXT);
+    $result = $stmt->execute();
 
-        while($row = $result->fetchArray(SQLITE3_ASSOC)){
-            $auto[] = $row;
-        }
+    while($row = $result->fetchArray(SQLITE3_ASSOC)){
+        $auto[] = $row;
     }
 
     echo json_encode($auto);
