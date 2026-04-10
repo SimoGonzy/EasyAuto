@@ -15,16 +15,18 @@
 }
 
 .comparison-grid {
-    display: grid;
-    grid-template-columns: 1fr 200px 1fr;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
     background: var(--white);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
 }
 
-.car-column {
-    padding: 40px;
+.car-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
 }
 

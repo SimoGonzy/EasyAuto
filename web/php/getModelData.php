@@ -10,7 +10,8 @@ try {
 
     if ($searchTerm !== '') {
         // CORREZIONE 1: Rimosse le virgolette attorno a :name
-        $stmt = $db->prepare("SELECT Auto.modello, 
+        $stmt = $db->prepare("SELECT 
+        Auto.modello, 
         Marca.nome as Marca,
         Auto.anno_Di_Produzione,
         Auto.immagine,
