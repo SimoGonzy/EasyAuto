@@ -2,12 +2,12 @@ const searchBar1 = document.getElementById('searchBar1');
 const searchBar2 = document.getElementById('searchBar2');
 
 // Passiamo direttamente l'elemento (this) invece dell'ID per comodità
-searchBar1.addEventListener('input', function() { prova(this) });
-searchBar2.addEventListener('input', function() { prova(this) });
+searchBar1.addEventListener('input', function() { barraRicerca(this) });
+searchBar2.addEventListener('input', function() { barraRicerca(this) });
 
 let timeout;
 
-function prova(searchb) {
+function barraRicerca(searchb) {
     clearTimeout(timeout);
 
     timeout = setTimeout(() => {
@@ -16,6 +16,7 @@ function prova(searchb) {
 
     let resultsBox = searchb.nextElementSibling;
     let query = searchb.value;
+
     if (query.length > 0) {
         fetch(`php/search.php?q=${encodeURIComponent(query)}`)
             .then(response => {
