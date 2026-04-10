@@ -5,14 +5,7 @@ const searchBar2 = document.getElementById('searchBar2');
 searchBar1.addEventListener('input', function() { barraRicerca(this) });
 searchBar2.addEventListener('input', function() { barraRicerca(this) });
 
-let timeout;
-
 function barraRicerca(searchb) {
-    clearTimeout(timeout);
-
-    timeout = setTimeout(() => {
-        cerca(searchb);
-    }, 300);
 
     let resultsBox = searchb.nextElementSibling;
     let query = searchb.value;
@@ -64,17 +57,42 @@ function renderResults(data, resultsBox, targetInput) {
 }
 
 function passaDati(modello,id) {
-    let div_nome = document.getElementById("car" +id+"-name")
-    let img = document.getElementById("car"+id+"-img")
+    let div_nome = document.getElementById("car" + id + "-name")
+    let img = document.getElementById("car"+ id + "-img")
+    let div_info = document.getElementById("car" + id + "-info")
+    let div_pot = document.getElementById("car" + id + "-pot")
+    let div_consumi = document.getElementById("car" + id + "-consumi")
+    let div_euro = document.getElementById("car" + id + "-euro")
+    let div_trasm = document.getElementById("car" + id + "-trasm")
+
     fetch(`php/getModelData.php?name=${encodeURIComponent(modello)}`)
-            .then(response => {
-                if (!response.ok) throw new Error("File PHP non trovato");
-                return response.json();
-            })
-            .then(data => {
-                car = data[0]
-                div_nome.innerHTML = "<p>"+car.modello+"</p>"
-                img.setAttribute("src",car.immagine)
-            })
-            .catch(err => console.error("Errore:", err));
+    .then(response => {
+        if (!response.ok) throw new Error("File PHP non trovato");
+        return response.json();
+    })
+    .then(data => {
+        // Se c'è un errore dal PHP o l'array è vuoto, fermati qui
+        if (data.error || data.length === 0) {
+            console.error("Dati non trovati o errore server:", data.error);
+            return; 
+        }
+
+        const car = data[0];
+        
+        div_nome.innerHTML = "<p>" + (car.modello) + "</p>";
+        
+        // Gestione Immagine
+        if (car.immagine && car.immagine !== "") {
+            img.setAttribute("src", car.immagine);
+        } else {
+            img.setAttribute("src", "img/default-car.png");
+        }
+
+        div_info.innerHTML = "<p>" + car.Marca + " - " + car.anno_Di_Produzione + "</p>";
+        div_pot.innerHTML = "<p>" + car.cilindrata_CC + "CC / " + car.cavalli + " CV</p>";
+        div_consumi.innerHTML = "<p>" + (car.consumo || 'N/A') + " L/100km (" + (car.tipo || 'N/A') + ")</p>";
+        div_euro.innerHTML = "<p>" + (car.standard_Ambientali || 'N/A') + "</p>";
+        div_trasm.innerHTML = "<p>" + (car.cambio || 'N/A') + " / " + (car.trazione || 'N/A') + "</p>";
+    })
+    .catch(err => console.error("Errore:", err));
 }
