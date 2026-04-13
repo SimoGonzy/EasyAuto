@@ -1,27 +1,3 @@
-/*
-app.post('/chat', async (req, res) => {
-    const { userQuery, carId } = req.body;
-
-    // 1. Recupera i dati dal tuo DB esistente
-    const carData = await myDatabase.getCarInfo(carId); 
-
-    // 2. Prepara la chiamata all'IA
-    const response = await openai.chat.completions.create({
-        model: "gpt-4o",
-        messages: [
-            { 
-              role: "system", 
-              content: `Sei un assistente tecnico. Dati auto: ${JSON.stringify(carData)}. Trova i principali difetti di costruzione e manutenzioni comuni da fare su quest'auto. Rispondi in modo conciso.` 
-            },
-            { role: "user", content: userQuery }
-        ],
-    });
-
-    // 3. Invia solo la risposta dell'IA al browser
-    res.json({ answer: response.choices[0].message.content });
-});
-*/
-
 const searchBar1 = document.getElementById('searchBar1');
 const searchBar2 = document.getElementById('searchBar2');
 
@@ -117,28 +93,6 @@ function passaDati(modello,id) {
         div_consumi.innerHTML = "<p>" + (car.consumo || 'N/A') + " L/100km (" + (car.tipo || 'N/A') + ")</p>";
         div_euro.innerHTML = "<p>" + (car.standard_Ambientali || 'N/A') + "</p>";
         div_trasm.innerHTML = "<p>" + (car.cambio || 'N/A') + " / " + (car.trazione || 'N/A') + "</p>";
-
-        generateAiSummary(car.id_Auto, car.modello);
     })
     .catch(err => console.error("Errore:", err));
-}
-
-async function generateAiSummary(id, name) {
-    const displayBox = document.getElementById('ai-response-box1');
-    displayBox.innerHTML = "<em>Analizzando i dati tecnici...</em>";
-
-    try {
-        const response = await fetch('/api/get-ai-report', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ carId: id, carName: name })
-        });
-
-        const data = await response.json();
-
-        // 3. Mostra il risultato (magari con un piccolo effetto fade-in)
-        displayBox.innerHTML = data.content; 
-    } catch (error) {
-        displayBox.innerHTML = "Manutenzione programmata non disponibile al momento.";
-    }
 }
