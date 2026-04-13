@@ -39,6 +39,7 @@ body {
   box-shadow: 0 4px 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
+  backdrop-filter: blur(10px);
 }
 svg {
   width: 100%;
@@ -70,6 +71,7 @@ path.selected {
   box-shadow: 0 4px 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
+  backdrop-filter: blur(10px);
 }
 h1 {
   margin: 0 0 10px 0;
@@ -95,7 +97,7 @@ th {
   text-align: left;
   padding: 12px;
   border-bottom: 2px solid var(--border);
-  color: #666;
+  color: #ffffff;
   font-size: 14px;
 }
 td {
