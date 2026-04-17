@@ -2,6 +2,8 @@ const APIKEY = "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";
 const searchBar1 = document.getElementById('searchBar1');
 const searchBar2 = document.getElementById('searchBar2');
 
+//PROVIAMO A COMMENTARE BRUTTE TROIETTE
+
 // --- CONFIGURAZIONE PROMPT MODIFICABILE ---
 const PROMPT_TEMPLATE = (modello, dati) => {
     return `Sei un esperto meccanico. Analizza questa ${modello} basandoti su questi dati: ${dati}. 
