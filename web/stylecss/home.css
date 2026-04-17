@@ -7,6 +7,7 @@
   align-items: center;
   text-align: center;
   overflow: hidden;
+  min-width: 100%; /* Ogni div occupa l'intera larghezza del contenitore */
 }
 
 /* --- REGOLA BASE: Definisce il COMPORTAMENTO dello sfondo --- */
@@ -21,6 +22,7 @@
   filter: blur(6px);
   transform: scale(1.1);
   z-index: -2;
+  min-width: 100%; /* Ogni div occupa l'intera larghezza del contenitore */
 }
 
 /* --- CLASSI SPECIFICHE: Definiscono QUALE immagine usare --- */
@@ -68,8 +70,43 @@
   text-decoration: none;
   transition: 0.3s;
 }
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.btn:hover { background: rgba(0,0,0,0.8); }
+.prev { left: 10px; }
+.next { right: 10px; }
 
 .btn-start:hover {
   background-color: var(--primary);
   transform: scale(1.05);
+}
+.btn:disabled{
+  background: rgba(96,96,96,0.5);
+  cursor:auto;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden; /* Nasconde i div fuori dalla vista */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Effetto scivolamento */
+}
+.home-footer{
+  gap:20px;
 }

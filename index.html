@@ -19,33 +19,47 @@
         <a href="web/login.html" class="btn-login">Accedi</a>
       </nav>
     </header>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <section class="home-container auto-bg">
+          <div class="home-content">
+            <h2>Confronta le migliori auto in pochi secondi</h2>
+            <p>Scegli due modelli e scopri quale fa per te.</p>
 
-    <section class="home-container auto-bg">
-      <div class="home-content">
-        <h2>Confronta le migliori auto in pochi secondi</h2>
-        <p>Scegli due modelli e scopri quale fa per te.</p>
+            <a href="web/confronto.html" class="btn-start"> Inizia il Confronto </a>
+          </div>
+        </section>
+        <section class="home-container fuel-bg">
+          <div class="home-content">
+            <h2>Confronta i prezzi regionali dei carburanti</h2>
+            <p>
+              Scopri le differenze di prezzo tra le stazioni di servizio più vicine.
+            </p>
 
-        <a href="web/confronto.html" class="btn-start"> Inizia il Confronto </a>
+            <a href="web/carburanti.html" class="btn-start"> Calcola i prezzi </a>
+          </div>
+        </section>
+        <section class="home-container fuel-bg">
+          <div class="home-content">
+            <h2>Confronta i prezzi regionali dei carburanti</h2>
+            <p>
+              Scopri le differenze di prezzo tra le stazioni di servizio più vicine.
+            </p>
+
+            <a href="web/carburanti.html" class="btn-start"> Calcola i prezzi </a>
+          </div>
+        </section>
       </div>
-    </section>
-
-    <br /><br /><br /><br /><br /><br /><br />
-
-    <section class="home-container fuel-bg">
-      <div class="home-content">
-        <h2>Confronta i prezzi regionali dei carburanti</h2>
-        <p>
-          Scopri le differenze di prezzo tra le stazioni di servizio più vicine.
-        </p>
-
-        <a href="web/carburanti.html" class="btn-start"> Calcola i prezzi </a>
-      </div>
-    </section>
-
+      <button class="btn prev" id="btnl" onclick="moveSlide(-1)" disabled="true">&#10094;</button>
+      <button class="btn next" id="btnr" onclick="moveSlide(1)">&#10095;</button>
+    </div>
     <footer class="main-footer">
-      <div class="footer-content">
+      <div class="footer-content home-footer">
+        
         <p>© 2026 Easy<span>Auto</span> - Tutti i diritti riservati</p>
+        
       </div>
     </footer>
+    <script src="web/javascript/slider_home.js"></script>
   </body>
 </html>
