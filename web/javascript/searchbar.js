@@ -24,35 +24,21 @@ REGOLE DI OUTPUT (OBBLIGATORIE):
 - Massimo 3 punti per sezione
 - Output sempre identico nella struttura
 - Non utilizzare simboli o emoji, solo testo
+- Crea un elenco puntato con i dati ricavati dal search
 
 ---
 
 STRUTTURA DELLA RISPOSTA (OBBLIGATORIA):
 
-## 🚗 ${modello}
-
-### 📊 Affidabilità generale
-- **Score:** X/10  
-- **Rischio:** Basso | Medio | Alto  
-
-### 🔧 Difetti comuni
+### Difetti comuni
 - [GRAVE] 
 - [MEDIO] 
 - [LEGGERO] 
 
-### 🛠️ Manutenzione preventiva
+### Manutenzione preventiva
 - 
 - 
 - 
-
----
-
-REGOLE PER LO SCORE:
-- 9–10 → molto affidabile
-- 7–8 → buona affidabilità
-- 5–6 → media affidabilità
-- 3–4 → bassa affidabilità
-- 1–2 → molto problematica
 
 ---
 
@@ -70,7 +56,7 @@ REGOLE PER I TAG DIFETTI:
 ---
 
 REGOLE DI CONTENUTO:
-- Se mancano dati, usa conoscenze tipiche del modello
+- Se mancano dati, fai uno scan sul web per integrare informazioni affidabili (es. forum, recensioni, database guasti)
 - Evita frasi vaghe tipo “problemi al motore”
 - I consigli devono essere pratici e concreti
 - Nessuna spiegazione, solo output strutturato
@@ -85,76 +71,63 @@ ESEMPIO DI STILE (NON COPIARE):
 };
 
 // Funzione per chiamare Groq e mostrare il testo
-async function generaAnalisiIA(carData, id) {
-  const textElement = document.getElementById("ai-text" + id);
-  if (!textElement) return;
+// Funzione di supporto per l'effetto scrittura che supporta il Markdown
+function typeWriterMarkdown(text, element) {
+    let i = 0;
+    let currentText = "";
+    
+    // Puliamo l'elemento prima di iniziare
+    element.innerHTML = "";
 
-  textElement.innerHTML = "<em>L'IA sta analizzando il database...</em>";
-
-  const promptCompleto = PROMPT_TEMPLATE(
-    carData.modello,
-    JSON.stringify(carData),
-  );
-
-  try {
-    const response = await fetch(
-      "https://api.groq.com/openai/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${APIKEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: "llama-3.1-8b-instant", // Modello gratis e veloce su Groq
-          messages: [
-            {
-              role: "system",
-              content: "Sei un assistente tecnico automobilistico.",
-            },
-            { role: "user", content: promptCompleto },
-          ],
-          temperature: 0.7,
-        }),
-      },
-    );
-
-    const result = await response.json();
-    const aiMessage = result.choices[0].message.content;
-
-    // Effetto macchina da scrivere
-    textElement.innerHTML = "";
-    typeWriter(aiMessage, textElement);
-  } catch (error) {
-    // Sostituisci la parte del fetch con questa per vedere l'errore reale
-    const response = await fetch(
-      "https://api.groq.com/openai/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${APIKEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: "llama-3.1-8b-instant",
-          messages: [{ role: "user", content: "Test" }],
-        }),
-      },
-    );
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error("Dettaglio Errore Groq:", errorData); // <--- LEGGI QUESTO NELLA CONSOLE
+    function step() {
+        if (i < text.length) {
+            currentText += text.charAt(i);
+            // Trasformiamo il Markdown accumulato finora in HTML
+            element.innerHTML = marked.parse(currentText);
+            i++;
+            setTimeout(step, 10); // Velocità regolabile
+        }
     }
-  }
+    step();
 }
 
-// Funzione di supporto per l'effetto scrittura
-function typeWriter(text, element, i = 0) {
-  if (i < text.length) {
-    element.innerHTML += text.charAt(i);
-    setTimeout(() => typeWriter(text, element, i + 1), 15);
-  }
+async function generaAnalisiIA(carData, id) {
+    const textElement = document.getElementById("ai-text" + id);
+    if (!textElement) return;
+
+    // Aggiungiamo una classe per lo styling
+    textElement.classList.add("markdown-body");
+    textElement.innerHTML = "<em>L'IA sta analizzando il database...</em>";
+
+    const promptCompleto = PROMPT_TEMPLATE(carData.modello, JSON.stringify(carData));
+
+    try {
+        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${APIKEY}`,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                model: "llama-3.1-8b-instant",
+                messages: [
+                    { role: "system", content: "Sei un assistente tecnico. Rispondi SEMPRE in Markdown." },
+                    { role: "user", content: promptCompleto },
+                ],
+                temperature: 0.5, // Leggermente più basso per maggiore precisione strutturale
+            }),
+        });
+
+        const result = await response.json();
+        const aiMessage = result.choices[0].message.content;
+
+        // Avviamo il render professionale
+        typeWriterMarkdown(aiMessage, textElement);
+
+    } catch (error) {
+        console.error("Errore:", error);
+        textElement.innerHTML = "Errore durante l'analisi.";
+    }
 }
 
 // Passiamo direttamente l'elemento (this) invece dell'ID per comodità
