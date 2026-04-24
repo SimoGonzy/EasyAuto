@@ -27,6 +27,7 @@ body {
     padding: 20px 5%;
     background: var(--white);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
 }
 
 .logo {
