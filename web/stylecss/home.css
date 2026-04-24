@@ -79,6 +79,8 @@
   border: none;
   padding: 15px;
   cursor: pointer;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
 }
 .btn:hover { background: rgba(0,0,0,0.8); }
