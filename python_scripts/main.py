@@ -4,13 +4,16 @@ from bs4 import BeautifulSoup
 import io
 import csv
 import sqlite3
+import mysql.connector
 from apscheduler.schedulers.background import BackgroundScheduler
 from contextlib import asynccontextmanager
 
 MIMIT_URL = "https://www.mimit.gov.it/it/prezzo-medio-carburanti/regioni"
 BASE_URL = "https://www.mimit.gov.it"
-NOME_DATABASE = "C:\\xampp\\htdocs\\EasyAuto\\database\\dbautoprova.db"
-
+NOME_DATABASE = "easyauto"
+NOME_USER ="root"
+HOST="localhost"
+PWD = ""
 def parse_prezzo(valore_str):
     """Converte le stringhe in float. Se trova 'n.d.' o vuoto, restituisce 0.0"""
     if not valore_str or "n.d." in valore_str.lower():
@@ -93,27 +96,28 @@ def aggiorna_database_carburanti():
                 dati_regioni[regione]['metano'] = prezzo
 
         # 5. Salva nel Database SQLite
-        with sqlite3.connect(NOME_DATABASE) as conn:
-            cursor = conn.cursor()
+        #with sqlite3.connect(NOME_DATABASE) as conn:
+        conn = mysql.connector.connect(host=HOST,user=NOME_USER,password=PWD,database=NOME_DATABASE)
+        cursor = conn.cursor()
+        query_sql = """
+                INSERT INTO Costi_Regione 
+                    (Regione, benzina, diesel, gpl, metano, euro0, euro1, euro2, euro3, euro4, euro5, euro6)
+                VALUES 
+                    (%s, %s, %s, %s, %s, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+                ON DUPLICATE KEY UPDATE 
+                    benzina = VALUES(benzina),
+                    diesel = VALUES(diesel),
+                    gpl = VALUES(gpl),
+                    metano = VALUES(metano);
+                """
+        
+        righe_aggiornate = 0
+        for reg, prezzi in dati_regioni.items():
+            cursor.execute(query_sql, (reg, prezzi['benzina'], prezzi['diesel'], prezzi['gpl'], prezzi['metano']))
+            righe_aggiornate += 1
             
-            query_sql = """
-            INSERT INTO Costi_Regione 
-            (Regione, benzina, diesel, gpl, metano, euro0, euro1, euro2, euro3, euro4, euro5, euro6)
-            VALUES (?, ?, ?, ?, ?, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
-            ON CONFLICT(Regione) DO UPDATE SET 
-                benzina=excluded.benzina,
-                diesel=excluded.diesel,
-                gpl=excluded.gpl,
-                metano=excluded.metano;
-            """
-            
-            righe_aggiornate = 0
-            for reg, prezzi in dati_regioni.items():
-                cursor.execute(query_sql, (reg, prezzi['benzina'], prezzi['diesel'], prezzi['gpl'], prezzi['metano']))
-                righe_aggiornate += 1
-                
-            conn.commit()
-            print(f"Aggiornamento database completato! Aggiornate {righe_aggiornate} regioni.")
+        conn.commit()
+        print(f"Aggiornamento database completato! Aggiornate {righe_aggiornate} regioni.")
 
     except Exception as e:
         print(f"Errore durante l'aggiornamento: {e}")

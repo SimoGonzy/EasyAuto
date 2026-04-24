@@ -1,9 +1,9 @@
 // Dati estratti direttamente dal tuo CSV
 let rawData = [];
 const date = new Date();
-let day = date.getDate();
-let month = date.getMonth() + 1;
-let year = date.getFullYear();
+const day = date.getDate();
+const month = date.getMonth() + 1;
+const year = date.getFullYear();
 fetch("../web/php/alimentazione.php")
   .then((response) => {
     if (!response.ok) {
