@@ -11,7 +11,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("https://images.pexels.com/photos/36872836/pexels-photo-36872836.jpeg");
+  background-image: url("https://images.pexels.com/photos/34636185/pexels-photo-34636185.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -76,7 +76,7 @@ path.selected {
 h1 {
   margin: 0 0 10px 0;
   font-size: 24px;
-  color: #ffffff;
+  color: #0056b3;
 }
 .status-bar {
   display: inline-block;
