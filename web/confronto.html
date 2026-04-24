@@ -1,113 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Easy Auto | Confronto 1vs1</title>
-        <link rel="stylesheet" href="stylecss/base.css">
-        <link rel="stylesheet" href="stylecss/confronto.css">
-        <link rel="icon" type="image/png" href="img/logo.png">
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Auto | Confronto 1vs1</title>
+    <link rel="stylesheet" href="stylecss/base.css" />
+    <link rel="stylesheet" href="stylecss/confronto.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo EasyAuto" />
+        <a href="../index.html" style="text-decoration: none"
+          ><h1>Easy<span>Auto</span></h1></a
+        >
+      </div>
 
-        <header class="main-header">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo EasyAuto">
-                <a href="../index.html" style="text-decoration: none;"><h1>Easy<span>Auto</span></h1></a>
+      <nav class="nav-container">
+        <a href="../index.html" class="btn-login">Home</a>
+        <a href="login.html" class="btn-login">Accedi</a>
+      </nav>
+    </header>
+
+    <main class="comparison-container">
+      <!-- -->
+      <section class="selection-bar">
+        <div class="select-wrapper">
+          <label>Prima Auto</label>
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchBar1"
+              placeholder="Cerca prima auto..."
+              autocomplete="off"
+            />
+            <div id="results" class="results-box"></div>
+          </div>
+        </div>
+
+        <div class="vs-badge">VS</div>
+
+        <div class="select-wrapper">
+          <label>Seconda Auto</label>
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchBar2"
+              placeholder="Cerca seconda auto..."
+              autocomplete="off"
+            />
+            <div id="results2" class="results-box"></div>
+          </div>
+        </div>
+      </section>
+      <!-- -->
+
+      <!-- -->
+
+      <div class="comparison-grid">
+        <div class="car-info">
+          <div class="car-card">
+            <img id="car1-img" src="img/default-car.png" alt="Auto 1" />
+            <h2 id="car1-name">Seleziona Auto A</h2>
+          </div>
+
+          <div></div>
+
+          <div class="car-card">
+            <img id="car2-img" src="img/default-car.png" alt="Auto 2" />
+            <h2 id="car2-name">Seleziona Auto B</h2>
+          </div>
+        </div>
+
+        <button type="button" class="collapsible">GENERALITÀ</button>
+        <div class="content">
+          <div class="car-info">
+            <div class="data-value" id="car1-info">-</div>
+            <div class="label">INFORMAZIONI</div>
+            <div class="data-value" id="car2-info">-</div>
+          </div>
+
+          <div class="car-info">
+            <div class="data-value" id="car1-pot">-</div>
+            <div class="label">POTENZA</div>
+            <div class="data-value" id="car2-pot">-</div>
+          </div>
+
+          <div class="car-info">
+            <div class="data-value" id="car1-consumi">-</div>
+            <div class="label">CONSUMI</div>
+            <div class="data-value" id="car2-consumi">-</div>
+          </div>
+
+          <div class="car-info">
+            <div class="data-value" id="car1-euro">-</div>
+            <div class="label">STANDARD AMBIENTALI</div>
+            <div class="data-value" id="car2-euro">-</div>
+          </div>
+
+          <div class="car-info">
+            <div class="data-value" id="car1-trasm">-</div>
+            <div class="label">TRASMISSIONE</div>
+            <div class="data-value" id="car2-trasm">-</div>
+          </div>
+        </div>
+
+        <button type="button" class="collapsible active">ANALISI AI</button>
+        <div class="content">
+          <div class="car-info">
+            <div id="ai-report-container1" class="ai-box">
+              <p id="ai-text1">In attesa di selezione...</p>
             </div>
-            
-            <nav class="nav-container">
-                <a href="../index.html" class="btn-login">Home</a>
-                <a href="login.html" class="btn-login">Accedi</a>
-            </nav>
-        </header>
-
-        <main class="comparison-container">
-            
-            <!-- -->
-            <section class="selection-bar">
-                <div class="select-wrapper">
-                    <label>Prima Auto</label>
-                    <div class="search-container">
-                        <input type="text" id="searchBar1" placeholder="Cerca prima auto..." autocomplete="off">
-                        <div id="results" class="results-box"></div>
-                    </div>
-                </div>
-
-                <div class="vs-badge">VS</div>
-
-                <div class="select-wrapper">
-                    <label>Seconda Auto</label>
-                    <div class="search-container">
-                        <input type="text" id="searchBar2" placeholder="Cerca seconda auto..." autocomplete="off">
-                        <div id="results2" class="results-box"></div>
-                    </div>
-                </div>
-            </section>
-            <!-- -->
-
-
-            <!-- -->
-            <div class="comparison-grid">
-                <div class="car-info">
-                    <div class="car-card">
-                        <img id="car1-img" src="img/default-car.png" alt="Auto 1">
-                        <h2 id="car1-name">Seleziona Auto A</h2>
-                    </div>
-
-                    <div></div>
-
-                    <div class="car-card">
-                        <img id="car2-img" src="img/default-car.png" alt="Auto 2">
-                        <h2 id="car2-name">Seleziona Auto B</h2>
-                    </div>
-                </div>
-
-                <div class="car-info">
-                    <div class="data-value" id="car1-info">-</div>
-                    <div class="label">INFORMAZIONI</div>
-                    <div class="data-value" id="car2-info">-</div>
-                </div>
-
-                <div class="car-info">
-                    <div class="data-value" id="car1-pot">-</div>
-                    <div class="label">POTENZA</div>
-                    <div class="data-value" id="car2-pot">-</div>
-                </div>
-
-                <div class="car-info">
-                    <div class="data-value" id="car1-consumi">-</div>
-                    <div class="label">CONSUMI</div>
-                    <div class="data-value" id="car2-consumi">-</div>
-                </div>
-
-                <div class="car-info">
-                    <div class="data-value" id="car1-euro">-</div>
-                    <div class="label">STANDARD AMBIENTALI</div>
-                    <div class="data-value" id="car2-euro">-</div>
-                </div>
-
-                <div class="car-info">
-                    <div class="data-value" id="car1-trasm">-</div>
-                    <div class="label">TRASMISSIONE</div>
-                    <div class="data-value" id="car2-trasm">-</div>
-                </div>
-
-                <div class="car-info">
-                    <div id="ai-report-container1" class="ai-box">
-                        <p id="ai-text1">In attesa di selezione...</p>
-                    </div>
-                    <div class="label">Analisi AI</div>
-                    <div id="ai-report-container2" class="ai-box">
-                        <p id="ai-text2">In attesa di selezione...</p>
-                    </div>
-                </div>
+            <div class="label">Risposta AI</div>
+            <div id="ai-report-container2" class="ai-box">
+              <p id="ai-text2">In attesa di selezione...</p>
             </div>
-            <!--  -->
+          </div>
+        </div>
 
-        </main>
+        <button type="button" class="collapsible">COSTI</button>
+        <div class="content">
+            <div class="car-info">
+                <div class="data-value" id="car1-bollo">-</div>
+                <div class="label">BOLLO</div>
+                <div class="data-value" id="car2-bollo">-</div>
+            </div>
 
-        <script src="javascript/searchbar.js"></script>
-    </body>
+            <div class="car-info">
+                <div class="data-value" id="car1-carburante">-</div>
+                <div class="label">CARBURANTE</div>
+                <div class="data-value" id="car2-carburante">-</div>
+            </div>
+        
+        </div>
+      <!--  -->
+    </main>
+
+    <script src="javascript/searchbar.js "></script>
+    <script src="javascript/collapsible.js"></script>
+  </body>
 </html>
