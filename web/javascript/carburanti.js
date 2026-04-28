@@ -49,22 +49,22 @@ fetch("../web/php/alimentazione.php")
     const oggetto = {
       reg: "Trentino - Alto Adige",
       tipo: "Benzina",
-      prezzo: parseFloat(((Bolzano[0].prezzo + Trento[0].prezzo) / 2).toFixed(3)),
+      prezzo: parseFloat(((parseFloat(Bolzano[0].prezzo) + parseFloat(Trento[0].prezzo)) / 2).toFixed(3)),
     };
     const oggetto2 = {
      reg: "Trentino - Alto Adige",
      tipo: "Diesel",
-     prezzo: parseFloat(((Bolzano[1].prezzo + Trento[1].prezzo) / 2).toFixed(3)),
+     prezzo: parseFloat(((parseFloat(Bolzano[1].prezzo) + parseFloat(Trento[1].prezzo)) / 2).toFixed(3)),
      };
     const oggetto3 = {
      reg: "Trentino - Alto Adige",
      tipo: "GPL",
-     prezzo: parseFloat(((Bolzano[2].prezzo + Trento[2].prezzo) / 2).toFixed(3)),
+     prezzo: parseFloat(((parseFloat(Bolzano[2].prezzo) + parseFloat(Trento[2].prezzo)) / 2).toFixed(3)),
     };
     const oggetto4 = {
       reg: "Trentino - Alto Adige",
       tipo: "Metano",
-      prezzo: parseFloat(((Bolzano[3].prezzo + Trento[3].prezzo) / 2).toFixed(3)),
+      prezzo: parseFloat(((parseFloat(Bolzano[3].prezzo) + parseFloat(Trento[3].prezzo)) / 2).toFixed(3)),
     };
     rawData.push(oggetto);
     rawData.push(oggetto2);
