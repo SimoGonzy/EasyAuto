@@ -282,10 +282,10 @@
 /* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 0 18px;
-  display: none;
+  max-height: 0;
   overflow: hidden;
   background-color: #f1f1f1;
-  transition: all 0.3s ease;
+  transition: max-height 0.2s ease-out;
 }
 
 .result-item:hover {
@@ -295,4 +295,19 @@
 
 .select-wrapper{
   width: 40%;
+}
+
+.arrow {
+  border: solid  #444;;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transition: 0.2s;
+  float: right;
+}
+
+.arrow.active{
+  rotate: 180deg;
+  transition: 0.2s;
 }
