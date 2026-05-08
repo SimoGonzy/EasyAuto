@@ -2,25 +2,27 @@
 
 /* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --primary: #000000;
-    --accent: #d32f2f!important; /* Minimal red accent for cars, like Porsche/Ferrari */
-    --bg: #ffffff;
-    --text-color: #111111;
-    --border-color: #e0e0e0;
+    --primary: #1a2a3a;
+    --accent: #3498db!important;
+    --bg: #f4f7f6;
+    --white: #ffffff;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg);
-    color: var(--text-color);
+    color: #333;
     line-height: 1.6;
-    letter-spacing: 0.2px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* HEADER */
@@ -29,35 +31,29 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border-color);
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .logo img {
-    height: 70px;
+    height: 100px;
     width: auto;
 }
 
 .logo h1 {
-    font-size: 1.6rem;
-    font-weight: 800;
+    font-size: 1.8rem;
     color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .logo span {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 /* PULSANTI */
@@ -66,55 +62,47 @@ body {
     text-decoration: none;
     background-color: var(--primary);
     color: white !important;
-    padding: 14px 35px;
-    border-radius: 0; /* Sharp corners */
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--primary);
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 2px solid var(--primary);
 }
 
 .btn-login:hover {
-    background-color: transparent;
-    color: var(--primary) !important;
+    background-color: var(--accent);
+    border-color: var(--accent);
 }
 
 /* FOOTER */
 .main-footer {
-    background: var(--bg);
-    border-top: 1px solid var(--border-color);
-    padding: 40px 5%;
-    margin-top: auto;
+    background: var(--white);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    padding: 20px 5%;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-content p {
-    color: var(--text-color)!important;
-    font-weight: 400!important;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    color: var(--primary)!important;
+    font-weight: 500!important;
 }
 
 .footer-content span {
-    color: var(--primary) !important;
-    font-weight: 700;
+    color: var(--accent) !important;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
 }

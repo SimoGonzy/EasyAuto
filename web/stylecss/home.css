@@ -133,3 +133,68 @@
 .home-footer {
   gap: 20px;
 }
+
+/* Sezione Benvenuto */
+.welcome-section {
+  padding: 60px 20px;
+  background-color: #ffffff; /* Sfondo pulito per staccare dal carosello */
+  text-align: center;
+}
+
+.welcome-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.welcome-container h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.welcome-container h2 span {
+  color: var(--primary); /* Usa il tuo colore principale */
+}
+
+.welcome-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Piccola lista di caratteristiche orizzontale */
+.welcome-features {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.welcome-features span {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-container h2 {
+    font-size: 2rem;
+  }
+  .welcome-features {
+    gap: 10px;
+  }
+}
