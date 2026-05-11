@@ -1,8 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  --main-blue: #2563eb;
+  --main-blue: #e02020;
   --bg-gray: #f8fafc;
-  --border: rgba(255, 255, 255, 0.2);
-  --glass-bg: rgba(15, 23, 42, 0.65);
+  --border: rgba(224, 32, 32, 0.24);
+  --glass-bg: rgba(13, 13, 13, 0.9);
 }
 
 main {
@@ -47,11 +53,11 @@ main::before {
   min-width: 450px;
   padding: 30px;
   border-radius: 24px;
-  background-color: var(--glass-bg);
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0.94) 0%, rgba(26, 26, 26, 0.92) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
   color: white;
   transition: transform 0.3s ease;
 }
@@ -87,7 +93,7 @@ path.selected {
   fill: var(--main-blue) !important;
   stroke: #ffffff;
   stroke-width: 2.5;
-  filter: drop-shadow(0 0 15px rgba(37, 99, 235, 0.8));
+  filter: drop-shadow(0 0 15px rgba(224, 32, 32, 0.8));
 }
 
 /* --- SEZIONE TABELLA --- */
@@ -96,11 +102,11 @@ path.selected {
   min-width: 400px;
   padding: 35px;
   border-radius: 24px;
-  background-color: var(--glass-bg);
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0.94) 0%, rgba(26, 26, 26, 0.92) 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
   color: white;
   display: flex;
   flex-direction: column;
@@ -125,9 +131,9 @@ h2 {
 .status-bar {
   display: inline-block;
   padding: 8px 20px;
-  background: rgba(37, 99, 235, 0.2);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(224, 32, 32, 0.14);
+  color: #ffd5d5;
+  border: 1px solid rgba(224, 32, 32, 0.35);
   border-radius: 30px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -175,9 +181,9 @@ tr:hover td {
 
 .price-cell {
   font-weight: 700;
-  color: #60a5fa;
+  color: #ff8f8f;
   font-size: 1.15rem;
-  text-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+  text-shadow: 0 0 10px rgba(224, 32, 32, 0.28);
 }
 
 .empty-state {
@@ -188,7 +194,7 @@ tr:hover td {
   line-height: 1.6;
   background: rgba(255,255,255,0.02);
   border-radius: 16px;
-  border: 1px dashed rgba(255,255,255,0.2);
+  border: 1px dashed rgba(224, 32, 32, 0.24);
 }
 
 @media (max-width: 900px) {

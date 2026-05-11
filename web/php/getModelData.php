@@ -20,7 +20,7 @@ try {
         auto.modello,   
         marca.nome as Marca,
         auto.anno_Di_Produzione,
-        auto.immagine,
+        /*auto.immagine,*/
         auto.standard_Ambientali,
         motore.cilindrata_CC,
         motore.cavalli,
