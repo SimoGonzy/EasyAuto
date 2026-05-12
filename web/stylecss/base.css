@@ -38,7 +38,7 @@ body::-webkit-scrollbar{
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 101;
   box-shadow: 0 4px 20px rgba(224, 32, 32, 0.15);
 }
 

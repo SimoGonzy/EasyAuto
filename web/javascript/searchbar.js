@@ -214,16 +214,17 @@ function passaDati(modello, id) {
       }
 
       const car = data[0];
-
       div_nome.innerHTML = "<p>" + car.modello + "</p>";
-
+      img.setAttribute("src", "img/cars/" + car.immagine);
+      img.setAttribute("onError","this.src=\'img/default-car.png\'")
       // Gestione Immagine
+      /*
       if (car.immagine && car.immagine !== "") {
         img.setAttribute("src", car.immagine);
       } else {
         img.setAttribute("src", "img/default-car.png");
       }
-
+      */
       div_info.innerHTML =
         "<p>" + car.Marca + " - " + car.anno_Di_Produzione + "</p>";
       div_pot.innerHTML =
