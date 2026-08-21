@@ -1,4 +1,4 @@
-const APIKEY = "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";
+const APIKEY = "NUH_UH";
 const searchBar1 = document.getElementById("searchBar1");
 const searchBar2 = document.getElementById("searchBar2");
 
